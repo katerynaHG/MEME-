@@ -4,8 +4,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const btn = document.querySelector("button");
     
     const memePlacement = document.getElementById("location");
-    form.addEventListener("submit", function(e){
-        e.preventDefault();
+   form.addEventListener("submit", (e)=>{e.preventDefault();
     
         // create div with meme img and text
         const newImg = document.createElement("img");
@@ -14,12 +13,8 @@ document.addEventListener('DOMContentLoaded', function(){
         const btmText = document.createElement("div");
         const btnRemove = document.createElement("div");
         
-        newImg.src = document.getElementById('imgurl').value;
-        newImg.width = 350;
-        newImg.height = 350;
-        
-      
-    
+        newImg.src = img.value;
+     
         textTop.classList.add('texttop');
         textTop.innerHTML = document.getElementById('toptext').value;
     
@@ -42,9 +37,6 @@ document.addEventListener('DOMContentLoaded', function(){
     
     // deleting each meme by clicking on X button on each meme
     
-    btnRemove.addEventListener("click", function(event){
-            event.target.parentNode.remove();
+    btnRemove.addEventListener("click", (e)=>e.target.parentNode.remove());
         });
-    
-    });
     });
